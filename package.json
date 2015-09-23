@@ -9,7 +9,9 @@
   },
   "main": "lib/index.js",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "lsof": "^0.1.0"
+  },
   "devDependencies": {
     "eslint": "^0.22.1",
     "mocha": "2.x"
