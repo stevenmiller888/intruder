@@ -1,4 +1,11 @@
 
+0.1.0 / September 24, 2015
+
+  * Added back EventEmitter
+  * Refactored to use async `exec`
+  * Cleanly exited child process so that the wireless card does not get stuck in monitor mode
+  * Parsed the cracking results to pass the actual key in the last callback
+
 0.0.3 / September 23, 2015
 
   * Change `exec` to `execSync`

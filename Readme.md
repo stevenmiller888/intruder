@@ -22,6 +22,35 @@ intruder.crack('Home', function(err, key) {
 });
 ```
 
+## API
+
+### Intruder(options)
+Create a new instance of Intruder that can crack a Wi-Fi network.
+
+The available options are:
+* `interval`: the length of time passed between cracking attempts
+* `channel`: the channel to sniff packets on
+
+#### .crack()
+
+Crack a Wi-Fi network by name:
+
+```js
+intruder.crack('My Wi-Fi Network', function(err, key) {
+  // ...
+});
+```
+
+### .on()
+
+Listen for the `attempt` event, which is emitted on each cracking attempt:
+
+```js
+intruder.on('attempt', function(ivs) {
+  console.log(ivs) // > 80,000 is good
+})
+```
+
 ## Note
 
 If you do not have [aircrack](https://github.com/aircrack-ng/aircrack-ng), install it with [Homebrew](https://github.com/Homebrew/homebrew):
