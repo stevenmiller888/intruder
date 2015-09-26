@@ -1,4 +1,8 @@
 
+0.1.2 / September 26, 2015
+
+  * Replaced template strings to support older versions of Node
+
 0.1.0 / September 24, 2015
 
   * Added back EventEmitter
