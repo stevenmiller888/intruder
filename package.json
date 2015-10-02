@@ -8,9 +8,11 @@
     "url": "https://github.com/stevenmiller888/intruder"
   },
   "main": "lib/index.js",
+  "bin": "cli",
   "license": "MIT",
   "dependencies": {
-    "lsof": "^0.1.0"
+    "lsof": "^0.1.0",
+    "minimist": "^1.2.0"
   },
   "devDependencies": {
     "eslint": "^0.22.1",
