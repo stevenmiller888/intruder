@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+
+var Intruder = require('./');
+var minimist = require('minimist');
+var argv = minimist(process.argv.slice(2), {
+  alias: {
+    interval: ['i'],
+    channel: ['c'],
+    help: ['h'],
+    verbose: ['v']
+  }
+});
+var ssid = argv._.join(' ');
+if (ssid.length === 0 || argv.help) {
+  console.log([
+    'intruder <ssid> [options]',
+    '  --help,     -h  displays this message',
+    '  --channel,  -c  the channel to sniff packets on',
+    '  --interval, -i  the length of time passed between cracking attempts',
+    '  --verbose,  -v  verbose output'
+  ].join('\n'));
+  return;
+}
+
+console.log('finding "%s" network...', ssid);
+
+var intruder = Intruder({
+  interval: argv.interval,
+  channel: argv.channel
+});
+
+intruder.crack(argv.ssid, function(err, key) {
+  if (err) {
+    console.error(err.message || err);
+    return;
+  }
+  console.log(key);
+});
