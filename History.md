@@ -1,4 +1,8 @@
 
+0.1.3 / October 1, 2015
+
+  * Added cli
+
 0.1.2 / September 26, 2015
 
   * Replaced template strings to support older versions of Node
