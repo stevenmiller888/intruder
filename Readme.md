@@ -28,7 +28,7 @@ intruder.crack('Home', function(err, key) {
 Create a new instance of Intruder that can crack a Wi-Fi network.
 
 The available options are:
-* `interval`: the length of time passed between cracking attempts
+* `interval`: the length of time to pass between cracking attempts, defaults to 2000000ms
 * `channel`: the channel to sniff packets on
 
 #### .crack()
@@ -60,6 +60,10 @@ If you do not have [aircrack](https://github.com/aircrack-ng/aircrack-ng), insta
 or MacPorts:
 
 `sudo port install aircrack-ng`
+
+or APT:
+
+`sudo apt-get install aircrack-ng`
 
 ## Warning
 
