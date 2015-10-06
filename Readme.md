@@ -16,10 +16,14 @@ Wi-Fi network cracking in Node.js. Currently supports WEP encryption.
 var Intruder = require('intruder');
 var intruder = Intruder();
 
-intruder.crack('Home', function(err, key) {
-  if (err) throw new Error(err);
-  console.log(key);
-});
+intruder
+  .on('attempt', function(ivs) {
+    console.log(ivs);
+  })
+  .crack('Home', function(err, key) {
+    if (err) throw new Error(err);
+    console.log(key);
+  });
 ```
 
 ## API
@@ -28,7 +32,7 @@ intruder.crack('Home', function(err, key) {
 Create a new instance of Intruder that can crack a Wi-Fi network.
 
 The available options are:
-* `interval`: the length of time to pass between cracking attempts, defaults to 2000000ms
+* `interval`: the time between crack attempts, defaults to 2000000ms
 * `channel`: the channel to sniff packets on
 
 #### .crack()

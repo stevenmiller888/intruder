@@ -13,8 +13,8 @@
   "dependencies": {
     "lsof": "^0.1.0",
     "minimist": "^1.2.0",
-    "network-scanner": "0.0.1",
-    "network-sniffer": "0.0.1"
+    "network-scanner": "0.0.2",
+    "network-sniffer": "0.1.0"
   },
   "devDependencies": {
     "eslint": "^0.22.1",
