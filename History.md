@@ -1,4 +1,8 @@
 
+0.2.0 / October 8, 2015
+
+  * Updated to use network-sniffer and network-scanner modules
+
 0.1.3 / October 1, 2015
 
   * Added cli

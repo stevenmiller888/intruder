@@ -1,5 +1,5 @@
 
-# intruder (WIP)
+# intruder
 [![NPM version][npm-image]][npm-url]
 [![build status][circle-image]][circle-url]
 [![license][license-image]][license-url]
