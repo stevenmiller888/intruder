@@ -17,7 +17,7 @@
     "network-sniffer": "0.1.0"
   },
   "devDependencies": {
-    "eslint": "^0.22.1",
+    "eslint": "^1.7.3",
     "mocha": "2.x"
   }
 }
