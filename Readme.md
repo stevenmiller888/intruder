@@ -10,7 +10,32 @@ Wi-Fi network cracking in Node.js. Currently supports WEP encryption.
 
     $ npm install intruder
 
+## Note
+
+Intruder is a wrapper over [aircrack-ng](https://github.com/aircrack-ng/aircrack-ng) and its installation is mandatory to Intruder work.
+If you do not have, you can follow these steps depending on your platform:
+
+Using [Homebrew](https://github.com/Homebrew/homebrew):
+
+`brew install aircrack-ng`
+
+or MacPorts:
+
+`sudo port install aircrack-ng`
+
+or APT:
+
+`sudo apt-get install aircrack-ng`
+
+or install [Windows binaries](http://aircrack-ng.org/downloads.html), including the ``\bin`` folder on Windows PATH.
+
+## Compatibility
+
+Some **important** functions of aircrack-ng does not work with some wireless card. Read this [aircrack's wiki](http://www.aircrack-ng.org/doku.php?id=compatibility_drivers) article so you can check if your is compatible.
+
 ## Usage
+
+Once you have aircrack-ng installed and a compatible chipset/driver 
 
 ```js
 var Intruder = require('intruder');
@@ -54,20 +79,6 @@ intruder.on('attempt', function(ivs) {
   console.log(ivs) // > 80,000 is good
 })
 ```
-
-## Note
-
-If you do not have [aircrack](https://github.com/aircrack-ng/aircrack-ng), install it with [Homebrew](https://github.com/Homebrew/homebrew):
-
-`brew install aircrack-ng`
-
-or MacPorts:
-
-`sudo port install aircrack-ng`
-
-or APT:
-
-`sudo apt-get install aircrack-ng`
 
 ## Warning
 
